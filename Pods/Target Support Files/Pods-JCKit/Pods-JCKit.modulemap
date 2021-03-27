@@ -1,0 +1,6 @@
+framework module Pods_JCKit {
+  umbrella header "Pods-JCKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

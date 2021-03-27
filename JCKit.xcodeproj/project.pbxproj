@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		1F7168AF25FDBE6A0059126F /* JCKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F7168AD25FDBE6A0059126F /* JCKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FC10ECF260FDEBD0038DE87 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC10ECE260FDEBD0038DE87 /* Extensions.swift */; };
+		1FC10ED2260FE09A0038DE87 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1FC10ED1260FE09A0038DE87 /* Podfile */; };
+		E33C5C8EF51322C62E38AB70 /* Pods_JCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85D25DB063225F30871B19C2 /* Pods_JCKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1F7168AA25FDBE6A0059126F /* JCKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JCKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F7168AD25FDBE6A0059126F /* JCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCKit.h; sourceTree = "<group>"; };
 		1F7168AE25FDBE6A0059126F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FC10ECE260FDEBD0038DE87 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		1FC10ED1260FE09A0038DE87 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		27BA722BD8C787CBE68A8731 /* Pods-JCKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-JCKit/Pods-JCKit.release.xcconfig"; sourceTree = "<group>"; };
+		42EAF9B43CC2FEA7C54E0E5B /* Pods-JCKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JCKit/Pods-JCKit.debug.xcconfig"; sourceTree = "<group>"; };
+		85D25DB063225F30871B19C2 /* Pods_JCKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JCKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E33C5C8EF51322C62E38AB70 /* Pods_JCKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,6 +41,8 @@
 			children = (
 				1F7168AC25FDBE6A0059126F /* JCKit */,
 				1F7168AB25FDBE6A0059126F /* Products */,
+				5CE5081C13DB1BE5B5DAE846 /* Pods */,
+				8839FAEA1AAFCD134645EE3C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -48,8 +59,27 @@
 			children = (
 				1F7168AD25FDBE6A0059126F /* JCKit.h */,
 				1F7168AE25FDBE6A0059126F /* Info.plist */,
+				1FC10ECE260FDEBD0038DE87 /* Extensions.swift */,
+				1FC10ED1260FE09A0038DE87 /* Podfile */,
 			);
 			path = JCKit;
+			sourceTree = "<group>";
+		};
+		5CE5081C13DB1BE5B5DAE846 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				42EAF9B43CC2FEA7C54E0E5B /* Pods-JCKit.debug.xcconfig */,
+				27BA722BD8C787CBE68A8731 /* Pods-JCKit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8839FAEA1AAFCD134645EE3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				85D25DB063225F30871B19C2 /* Pods_JCKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -70,6 +100,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F7168B225FDBE6A0059126F /* Build configuration list for PBXNativeTarget "JCKit" */;
 			buildPhases = (
+				53BC0D189F31B3BBBC4B0F50 /* [CP] Check Pods Manifest.lock */,
 				1F7168A525FDBE6A0059126F /* Headers */,
 				1F7168A625FDBE6A0059126F /* Sources */,
 				1F7168A725FDBE6A0059126F /* Frameworks */,
@@ -94,6 +125,7 @@
 				TargetAttributes = {
 					1F7168A925FDBE6A0059126F = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 				};
 			};
@@ -120,16 +152,39 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FC10ED2260FE09A0038DE87 /* Podfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		53BC0D189F31B3BBBC4B0F50 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JCKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1F7168A625FDBE6A0059126F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FC10ECF260FDEBD0038DE87 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +315,9 @@
 		};
 		1F7168B325FDBE6A0059126F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42EAF9B43CC2FEA7C54E0E5B /* Pods-JCKit.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = T337VCC9XQ;
@@ -269,14 +326,11 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = JCKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = JeffChavez.JCKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -284,7 +338,9 @@
 		};
 		1F7168B425FDBE6A0059126F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27BA722BD8C787CBE68A8731 /* Pods-JCKit.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = T337VCC9XQ;
@@ -293,11 +349,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = JCKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = JeffChavez.JCKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
